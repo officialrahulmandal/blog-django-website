@@ -1,20 +1,5 @@
-
-<html>
-<head>
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-{%load staticfiles%}
-<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="{% static 'css/blog.css'%}">
-  <title>Blog Website</title>
-</head>
-<body>
-  <div class="page-header">
-    Blog made in Django
-  </div>
-  <div class="content container">
-    <div class="row">
-      <div class="col-md-8">
+{%extends 'blog/base.html'%}
+{%block content%}
   {%for post in posts%}
     <div class="post">
       <div  class="date">
@@ -26,10 +11,4 @@
 
 
   {%endfor%}
-</div>
-</div>
-</div>
-
-
-</body>
-</html>
+{%endblock%}
